@@ -79,6 +79,15 @@ function loadSong(index) {
     titleElem.textContent = song.title;
     artistElem.textContent = song.artist;
     imageElem.src = song.image;
+
+    const allItems = document.querySelectorAll('.list-contain');
+    allItems.forEach(item => item.classList.remove('active'));
+    if (listItems[index]){
+        listItems[index].classList.add('active');
+    }
+
+
+
 }
 
 // 
@@ -201,7 +210,14 @@ for (let i =0; i <listItems.length; i++){
     currentIndex = i;
     loadSong(currentIndex);
     audio.play();
-    })
+    
+    document.querySelectorAll('list-contain').forEach(item => {
+        item.classList.remove('active');
+    });
+    listItems[i].classList.add('active');
+});
+
+
 }
 
 

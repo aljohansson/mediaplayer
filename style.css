@@ -146,8 +146,9 @@ a {
 }
 
 .list .active {
-	background-color: rgba(255,255,255,0.08)!important;
+	background-color: rgba(255,255,255,0.12)!important;
 	box-shadow: inset 0 0 0 1px rgba(255,255,255,0.1);
+	border-left: 4px solid #ff4081;
 }
 
 .list .list-contain:hover {
@@ -328,4 +329,63 @@ a {
 	font-size: 5rem;
 	margin-left: 1rem;
 	margin-right: 1rem;
+}
+
+
+
+@media screen and (max-width: 640px) {
+  .flexcolumn {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .playlist,
+  .player {
+    flex: 100%;
+    width: 100%;
+    border: none;
+  }
+
+  .player {
+    padding: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .thumb {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  .player-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .player-controls {
+    flex-wrap: wrap;
+    gap: 1rem;
+    max-width: 100%;
+  }
+
+  .time {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+  }
+
+  header h1 {
+    font-size: 1.1rem;
+  }
+
+  .list .list-contain {
+    padding: 15px 20px;
+  }
+
+  .list .list-contain .info h4 {
+    font-size: 1.1rem;
+  }
+
+  .list .list-contain .info span {
+    font-size: 0.95rem;
+  }
 }
